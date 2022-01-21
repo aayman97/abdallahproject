@@ -11,7 +11,7 @@ import {
 import { MaterialIcons, FontAwesome } from "@expo/vector-icons";
 const { width, height } = Dimensions.get("screen");
 
-export default Login = () => {
+const LoginScreen = ({ navigation }) => {
   const EmailTextInput = () => {
     return (
       <View
@@ -150,6 +150,9 @@ export default Login = () => {
           justifyContent: "center",
           alignItems: "center",
         }}
+        onPress={() => {
+          navigation.navigate("Screens");
+        }}
       >
         <Text
           style={{
@@ -270,3 +273,5 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
 });
+
+export default LoginScreen;
